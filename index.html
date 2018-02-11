@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>MyBlog</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+</head>
+<body>
+
+
+<nav class="navbar navbar-default" id="mainnav">
+  <div class="container">
+    <div class="navbar-header" >
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="current"><a href="#" style="color: white">About</a></li>
+        <li><a href="movie.html" style="color: white">Movie</a></li>
+        <li><a href="weather.html" style="color: white">Weather</a></li>
+        <li><a href="ecomm.html" style="color: white">E-commerce</a></li>
+        <li><a href="login.html" style="color: white;">Login</a></li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<div>
+  <center><img src="profile.jpg" class="img-circle" width="15%" height="15%" style="background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65));"></center>
+  
+</div>
+
+<div class="container bg-2 text-center" id="myself">
+  <h3 class="margin">What Am I?</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+  <a href="myResume.pdf" target="_blank"><button type="button" class="btn btn-primary btn-lg" style="margin: 2%;">Resume</button></a>
+</div>
+
+<div class="container" id="work">
+  <div class="row">
+    <div class="col-sm-6 col-xs-12 bg-overlay1">
+      <div class="text-center">
+        <a href="https://naaopl-fc3e2.firebaseapp.com" target="_blank"><button type="button" class="btn btn-primary btn-lg"> Click To Visit</button></a>
+      </div>
+      
+      </div>
+      <div class="col-sm-6 col-xs-12 bg-overlay2">
+      <div class="text-center">
+        <a href="https://csevssut.in" target="_blank"><button type="button" class="btn btn-primary btn-lg"> Click To Visit</button></a>
+      </div>
+      </div>
+  </div>
+</div>
+
+<footer class="container-fluid bg-4 text-center">
+  <p>Made With Love</p>
+</footer>
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

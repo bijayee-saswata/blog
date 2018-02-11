@@ -1,0 +1,188 @@
+
+body {
+	
+	background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("2.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+/*  OPAQUE NAVBAR SECTION
+***********************************************************************/
+.navbar {
+    background-color: rgba(0,0,0,0.5);
+    border: 0;
+   padding: 1%;
+   
+}
+#myNavbar li{
+	color: white;
+}
+
+  .bg-2 { 
+      background-color: #474e5d; 
+      color: #ffffff;
+
+  } 
+#myself{
+margin-top:5%; 
+}
+#work{
+	margin-top: 5%;
+	margin-bottom: 5%;
+	background-size: cover;
+}
+.bg-overlay1 {
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("s1.png");
+   
+    background-size: cover;
+    color: #fff;
+    height: 400px;
+    width: 50%;
+    background-position: center center;
+    
+}
+
+.bg-overlay2 {
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("s2.png");
+   
+    background-size: cover;
+    color: #fff;
+    left: 0;
+    height: 400px;
+    width: 50%;
+   
+}
+
+ .bg-overlay2 button{
+position: center center;
+margin-top: 35%;
+}
+.bg-overlay1 button{
+	position: center center;
+margin-top: 35%;
+}
+
+footer{
+	padding: 1%;
+	background-color: rgba(0,0,0,0.5);
+    border-bottom: 0;
+    color: #fff;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.footer{
+	padding: 1%;
+	background-color: rgba(0,0,0,0.5);
+    border-bottom: 0;
+    color: #fff;
+   position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+/*     -------Login Section----     */
+
+.social-login{
+	text-align:center;
+	font-size:12px;
+}
+.social-login p{
+	margin:15px 0;
+}
+
+.social-login input{
+	width:50%;
+	float: left;
+    clear:fix;
+    color: #fff;
+    display:block;
+	font-size:13px;
+	padding:10px 0;
+	text-decoration:none;
+}
+
+.social-login #gbtn {
+	
+	background:#e74c3d;
+}
+.social-login #fbbtn{
+	background:#3b5998;
+}
+.social-login #inbtn{
+	background: #1982ff ;
+}
+
+.container-fluid1{
+	padding-top: 5%;
+}
+
+
+
+/*   ------ecomm-----*/
+
+
+
+
+/* -----responsive Section----- */
+
+
+
+
+
+@media (max-width: 992px) {
+  body
+  {
+    background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("2.jpg");
+  background-position: center;
+  background-size: cover;
+  }
+
+
+.bg-overlay1 {
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("s1.png");
+   
+    background-size: cover;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+
+    
+}
+
+.bg-overlay2 {
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("s2.png");
+   
+    background-size: cover;
+    color: #fff;
+    left: 0;
+    height: 100%;
+    width: 100%;
+   margin-top: 5%;
+}
+
+.bg-overlay1 button{
+
+margin-top: 20%;
+margin-bottom: 20%;
+}
+  
+   .bg-overlay2 button{
+margin-top: 20%;
+margin-bottom: 20%;
+}
+
+.footer{
+	padding: 1%;
+	background-color: rgba(0,0,0,0.5);
+    border-bottom: 0;
+    color: #fff;
+    position: fixed;
+  width: 100%;
+}
+}
+
+
+
+

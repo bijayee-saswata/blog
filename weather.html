@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Weather</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+    
+</head>
+<body>
+
+
+<nav class="navbar navbar-default" id="mainnav">
+  <div class="container">
+    <div class="navbar-header" >
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="current"><a href="index.html" style="color: white">About</a></li>
+        <li><a href="movie.html" style="color: white">Movie</a></li>
+        <li><a href="weather.html" style="color: white">Weather</a></li>
+        <li><a href="ecomm.html" style="color: white">E-commerce</a></li>
+        <li><a href="login.html" id="loginid" style="color: white;">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container" style="color: #fff;">
+<div class="container" style="background-color: #fff;color: black;font-size: 2em;margin-top: 3%;" id="weather"></div>
+<div class="container">
+<div class="row" style="background-color: black;opacity: 0.5;padding-top: 1%;">
+  <div class="col-md-6" >
+    <p><span id="latitude"></span></p>
+  </div>
+  <div class="col-md-6">
+    <p><span id="longitude"></span></p>
+  </div>
+</div>
+<div class="row" style="margin-top: 5%;position: cover;">
+  <div class="col-md-6" >
+    
+   <div class="panel panel-danger">
+       
+    <div class="panel-body" style="background:linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url(bridge.jpg);height: 100%;width: 100%;">
+      <ul style="list-style: none;padding: 5%;">
+        <li id="temp" style="padding: 2%;"></li>
+        <li id="wind" style="padding: 2%;"></li>
+        <li id="update" style="padding: 2%;"></li>
+        <li id="dew" style="padding: 2%;"></li>
+        <li id="heat" style="padding: 2%;"></li>
+        <li id="pressure" style="padding: 2%;"></li>
+      </ul>
+    </div>
+   </div>
+  </div>
+    <div class="col-md-6">
+      <div class="panel panel-danger">
+        <div class="panel-body" style="background: none !important;overflow:hidden;height: 100%;width: 100%;">
+           <div class="mapouter">
+            <div class="gmap_canvas">
+              <a href="https://www.pureblack.de/webdesign-muenchen/"></a>
+              <iframe width="100%" height="290" id="gmap_canvas" src="https://maps.google.com/maps?q=kolkata&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div>
+           </div>
+          </div>
+    </div>
+</div>
+</div>
+
+</div>
+<div>
+<center><a href="https://www.wunderground.com/weather/in/kolkata/22.541%2C88.338?cm_ven=localwx_today" target="_blank">
+<button type="button" class="btn btn-primary" style="margin-top: 5%;margin-bottom: 15%;"> more</button></a></center>
+</div>
+
+<div class="footer text-center">
+  <p>Made With Love</p>
+</div>
+
+<script type="text/javascript" src="script.js"></script>
+
+<script>
+  var weather =new XMLHttpRequest();
+  weather.open("GET", "http://api.wunderground.com/api/82365ed19827b764/conditions/q/IN/Kolkata.json",false);
+  weather.send(null);
+
+  var r= JSON.parse(weather.response);
+  var weather="Current location : "+ r.current_observation.display_location.full + "<br /";
+  var latitude="latitude : "+ r.current_observation.display_location.latitude + "<br /";
+  var longitude="longitude : "+ r.current_observation.display_location.longitude + "<br /";
+   var update= r.current_observation.observation_time + "<br /";
+  var temp="Temperature: "+ r.current_observation.temperature_string + "<br/>";
+  var wind="Wind : "+ r.current_observation.wind_string + "<br/>";
+  var dew="Dew : "+ r.current_observation.dewpoint_string + "<br/>";
+  var heat="Heat : "+ r.current_observation.heat_index_string + "<br/>";
+  var pressure="Pressure (mb) : "+ r.current_observation.pressure_mb + "<br/>";
+
+document.getElementById("weather").innerHTML=weather;
+document.getElementById("latitude").innerHTML=latitude;
+document.getElementById("longitude").innerHTML=longitude;
+document.getElementById("update").innerHTML=update;
+document.getElementById("temp").innerHTML=temp;
+document.getElementById("wind").innerHTML=wind;
+document.getElementById("dew").innerHTML=dew;
+document.getElementById("heat").innerHTML=heat;
+document.getElementById("pressure").innerHTML=pressure;
+
+</script>
+
+</body>
+</html>
