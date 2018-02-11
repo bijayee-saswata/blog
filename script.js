@@ -128,6 +128,7 @@ firebase.auth().onAuthStateChanged(function (user) {
     //email.innerText=datasnapshot.val();
     $("#loginid").hide();
    $("#username").show();
+   $("#signout").show();
       //document.getElementById('userid').innerHTML = user.email;
     localStorage.setItem("lastemail", user.email);
     // Retrieve
